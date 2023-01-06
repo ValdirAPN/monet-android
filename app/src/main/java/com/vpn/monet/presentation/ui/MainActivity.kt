@@ -1,7 +1,8 @@
-package com.vpn.monet
+package com.vpn.monet.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.vpn.monet.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
