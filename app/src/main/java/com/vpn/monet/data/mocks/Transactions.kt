@@ -1,8 +1,8 @@
-package com.vpn.monet.mocks
+package com.vpn.monet.data.mocks
 
-import com.vpn.monet.models.Account
-import com.vpn.monet.models.Transaction
-import com.vpn.monet.models.enums.TransactionType
+import com.vpn.monet.domain.models.Account
+import com.vpn.monet.domain.models.Transaction
+import com.vpn.monet.domain.models.enums.TransactionType
 import java.util.Date
 
 val ACCOUNTS_MOCK = listOf(

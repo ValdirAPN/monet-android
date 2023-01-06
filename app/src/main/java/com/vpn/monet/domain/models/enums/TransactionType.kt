@@ -1,4 +1,4 @@
-package com.vpn.monet.models.enums
+package com.vpn.monet.domain.models.enums
 
 enum class TransactionType {
     INCOME, OUTCOME

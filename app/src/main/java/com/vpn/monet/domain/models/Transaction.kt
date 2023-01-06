@@ -1,6 +1,6 @@
-package com.vpn.monet.models
+package com.vpn.monet.domain.models
 
-import com.vpn.monet.models.enums.TransactionType
+import com.vpn.monet.domain.models.enums.TransactionType
 import java.util.Date
 
 data class Transaction(
