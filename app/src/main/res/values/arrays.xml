@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bank_accounts">
+        <item>Nubank</item>
+        <item>Will</item>
+        <item>Inter</item>
+        <item>Banco do Brasil</item>
+        <item>Neon</item>
+    </string-array>
+</resources>
