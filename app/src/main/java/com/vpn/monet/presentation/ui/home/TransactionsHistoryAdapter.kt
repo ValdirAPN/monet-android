@@ -8,7 +8,7 @@ import com.vpn.monet.R
 import com.vpn.monet.domain.models.Transaction
 
 class TransactionsHistoryAdapter(
-    private val dataSet: List<Transaction>
+    private val dataSet: MutableList<Transaction>
 ) : RecyclerView.Adapter<TransactionsHistoryAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -25,4 +25,10 @@ class TransactionsHistoryAdapter(
     }
 
     override fun getItemCount() = dataSet.size
+
+    fun overrideAll(newDataSet: List<Transaction>) {
+        dataSet.clear()
+        dataSet.addAll(newDataSet)
+        notifyItemRangeChanged(0, newDataSet.size)
+    }
 }
