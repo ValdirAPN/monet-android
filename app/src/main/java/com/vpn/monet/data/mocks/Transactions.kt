@@ -6,13 +6,13 @@ import com.vpn.monet.domain.models.enums.TransactionType
 import java.util.Date
 
 val ACCOUNTS_MOCK = listOf(
-    Account("Nubank"),
-    Account("Will"),
-    Account("Inter")
+    Account("1","Nubank"),
+    Account("2","Will"),
+    Account("3","Inter")
 )
 
 val TRANSCATIONS_MOCK = listOf(
-    Transaction("Gasolina", TransactionType.OUTCOME, 100.00, 1, ACCOUNTS_MOCK[0], Date()),
-    Transaction("Salário", TransactionType.INCOME, 5500.00, 1, ACCOUNTS_MOCK[0], Date()),
-    Transaction("Lanche", TransactionType.OUTCOME, 64.00, 1, ACCOUNTS_MOCK[0], Date()),
+    Transaction("1","Gasolina", TransactionType.OUTCOME, 100.00, 1, ACCOUNTS_MOCK[0], Date()),
+    Transaction("2","Salário", TransactionType.INCOME, 5500.00, 1, ACCOUNTS_MOCK[0], Date()),
+    Transaction("3","Lanche", TransactionType.OUTCOME, 64.00, 1, ACCOUNTS_MOCK[0], Date()),
 )
