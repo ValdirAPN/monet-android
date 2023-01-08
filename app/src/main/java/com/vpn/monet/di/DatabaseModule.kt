@@ -28,6 +28,6 @@ class DatabaseModule {
             appContext,
             AppDatabase::class.java,
             "MonetDb"
-        ).build()
+        ).fallbackToDestructiveMigration().build()
     }
 }

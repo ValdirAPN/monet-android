@@ -8,7 +8,7 @@ import com.vpn.monet.data.entities.AccountEntity
 import com.vpn.monet.data.entities.TransactionEntity
 import com.vpn.monet.data.entities.converters.DateConverter
 
-@Database(entities = [TransactionEntity::class, AccountEntity::class], version = 1, exportSchema = false)
+@Database(entities = [TransactionEntity::class, AccountEntity::class], version = 3, exportSchema = false)
 @TypeConverters(DateConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun transactionDao(): TransactionDao

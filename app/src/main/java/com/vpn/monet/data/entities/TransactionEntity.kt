@@ -10,10 +10,11 @@ import java.util.*
 
 @Entity(tableName = "transaction")
 data class TransactionEntity(
-    @PrimaryKey
-    val id: String,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int? = null,
     val title: String,
     val type: TransactionType,
+    val thirdPerson: String,
     val value: Double,
     val installments: Int,
     @Embedded(prefix = "account_")
@@ -26,6 +27,7 @@ fun TransactionEntity.toDomainModel() : Transaction {
         id = this.id,
         title = this.title,
         type = this.type,
+        thirdPerson = this.thirdPerson,
         value = this.value,
         installments = this.installments,
         account = this.account.toDomainModel(),

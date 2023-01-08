@@ -1,6 +1,7 @@
 package com.vpn.monet.data.repositories.transactions
 
 import com.vpn.monet.data.db.TransactionDao
+import com.vpn.monet.data.entities.TransactionEntity
 import com.vpn.monet.data.entities.toDomainModel
 import com.vpn.monet.domain.models.Transaction
 import kotlinx.coroutines.CoroutineDispatcher
@@ -20,5 +21,9 @@ class TransactionsLocalDataSourceImpl @Inject constructor(
                 it.toDomainModel()
             }
         }
+    }
+
+    override fun insertTransaction(transactionEntity: TransactionEntity) {
+        transactionDao.insert(transactionEntity)
     }
 }

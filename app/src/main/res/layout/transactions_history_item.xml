@@ -14,10 +14,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageViewMoneySend"
+            android:id="@+id/imageViewTransactionType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_money_send"
+            android:src="@drawable/ic_money_sent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +31,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/textViewAmount"
-            app:layout_constraintStart_toEndOf="@id/imageViewMoneySend"
+            app:layout_constraintStart_toEndOf="@id/imageViewTransactionType"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView

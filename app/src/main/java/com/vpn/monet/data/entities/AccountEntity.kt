@@ -7,8 +7,8 @@ import com.vpn.monet.domain.models.Transaction
 
 @Entity(tableName = "account")
 data class AccountEntity(
-    @PrimaryKey
-    val id: String,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int? = null,
     val name: String,
 )
 
