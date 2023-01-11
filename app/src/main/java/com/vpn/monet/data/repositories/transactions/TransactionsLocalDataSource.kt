@@ -6,5 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface TransactionsLocalDataSource {
     suspend fun getTransactions(): Flow<List<Transaction>>
+    suspend fun getIncomeTransactions(): Flow<List<Transaction>>
+    suspend fun getOutcomeTransactions(): Flow<List<Transaction>>
     fun insertTransaction(transactionEntity: TransactionEntity)
 }

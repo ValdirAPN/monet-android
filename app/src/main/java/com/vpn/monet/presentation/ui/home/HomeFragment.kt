@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.vpn.monet.R
 import com.vpn.monet.data.mocks.TRANSCATIONS_MOCK
 import com.vpn.monet.databinding.FragmentHomeBinding
+import com.vpn.monet.domain.common.utils.toCurrency
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -46,6 +47,9 @@ class HomeFragment : Fragment() {
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.uiState.collect {
+                    binding.textViewTotalBalanceValue.text = it.totalBalance.toCurrency()
+                    binding.textViewTotalExpensesValue.text = it.totalExpenses.toCurrency()
+
                     val historyList = it.transactionsHistoryList
                     adapter.overrideAll(historyList)
                 }

@@ -113,9 +113,10 @@ class AddTransactionFragment : Fragment() {
             for (i in 1..12) {
                 installmentsList.add("${i}x de R$ ${value.toDouble() / i}")
             }
-            (binding.autoCompleteTextViewInstallments as MaterialAutoCompleteTextView).setSimpleItems(
-                    installmentsList.toTypedArray()
-                )
+            (binding.autoCompleteTextViewInstallments as MaterialAutoCompleteTextView)
+                .setSimpleItems(installmentsList.toTypedArray())
+
+            binding.autoCompleteTextViewInstallments.setText(installmentsList.first(), false)
         }
     }
 

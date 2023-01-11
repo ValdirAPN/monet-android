@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.vpn.monet.R
 import com.vpn.monet.databinding.TransactionsHistoryItemBinding
+import com.vpn.monet.domain.common.utils.toCurrency
 import com.vpn.monet.domain.models.Transaction
 import com.vpn.monet.domain.models.enums.TransactionType
 
@@ -13,9 +14,9 @@ class TransactionsHistoryAdapter(
     private val dataSet: MutableList<Transaction>
 ) : RecyclerView.Adapter<TransactionsHistoryAdapter.ViewHolder>() {
 
-    inner class ViewHolder(val binding: TransactionsHistoryItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: TransactionsHistoryItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Transaction) {
-            binding.textViewAmount.text = item.value.toString()
+            binding.textViewAmount.text = item.value.toCurrency()
             binding.textViewName.text = item.title
             binding.textViewLocation.text = item.thirdPerson
 

@@ -30,6 +30,7 @@
                 android:text="Total Balance" />
 
             <TextView
+                android:id="@+id/textViewTotalBalanceValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="R$ 1.458,96"
@@ -61,9 +62,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Balance" />
+                android:text="Total Expenses" />
 
             <TextView
+                android:id="@+id/textViewTotalExpensesValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="R$ 12.458,96"
